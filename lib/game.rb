@@ -13,6 +13,15 @@ class Game
 
   def call
     puts "welcome to tic-tac-toe"
+    puts "how many players?"
+    num_players = gets.strip.to_i
+    if num_players == 0
+      self.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"), board = Board.new)
+    elsif num_players == 1
+      #do
+    elsif num_players == 2
+    #do
+    end
   end
 
   attr_accessor :board, :player_1, :player_2
