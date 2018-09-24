@@ -21,7 +21,7 @@ class Game
       self.new(play_1, play_2)
     end
 
-      
+
 
   end
 
