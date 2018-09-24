@@ -16,14 +16,13 @@ class Game
     puts "how many players?"
     num_players = gets.strip.to_i
     if num_players == 0
-      self.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"), board = Board.new)
-    elsif num_players == 1
-
-      
-      self.new(player_1 = Players::Human.new("X"), player_2 = Players::Computer.new("O"), board = Board.new)
-    elsif num_players == 2
-      self.new(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"), board = Board.new)
+      play_1 = Players::Computer.new("X")
+      play_2 = Players::Computer.new("O")
+      self.new(play_1, play_2)
     end
+
+
+
   end
 
   attr_accessor :board, :player_1, :player_2
