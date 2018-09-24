@@ -12,10 +12,10 @@ end
 
 board = Board.new
 if num_players == 0
-  Game.new(Players::Computer.new("X"), Players::Computer.new("O"), board)
+  game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"), board)
 elsif num_players == 1
-  Game.new(Players::Human.new("X"), Players::Computer.new("O"), board)
+    game = Game.new(Players::Human.new("X"), Players::Computer.new("O"), board)
 elsif num_players == 2
-  Game.new(Players::Human.new("X"), Players::Human.new("O"), board)
+    game = Game.new(Players::Human.new("X"), Players::Human.new("O"), board)
 end
-Game.play
+game.play
