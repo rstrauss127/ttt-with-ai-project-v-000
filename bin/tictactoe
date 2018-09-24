@@ -4,8 +4,16 @@ require_relative '../config/environment'
 
 puts "welcome to tic-tac toe"
 puts "how many players"
+
 num_players = gets.strip.to_i
+while num_players > 2
+  num_players = gets.strip.to_i
+end
 if num_players == 0
   Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
-  puts "bla"
+elsif num_players == 1
+  Game.new(Players::Human.new("X"), Players::Computer.new("O"))
+elsif num_players == 2
+  Game.new(Players::Human.new("X"), Players::Human.new("O"))
+
 end
