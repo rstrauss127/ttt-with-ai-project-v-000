@@ -18,6 +18,8 @@ class Game
     if num_players == 0
       self.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"), board = Board.new)
     elsif num_players == 1
+
+      
       self.new(player_1 = Players::Human.new("X"), player_2 = Players::Computer.new("O"), board = Board.new)
     elsif num_players == 2
       self.new(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"), board = Board.new)
