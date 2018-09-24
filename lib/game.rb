@@ -11,26 +11,14 @@ class Game
     [2, 4, 6]
   ]
 
-  def call
-    puts "welcome to tic-tac-toe"
-    puts "how many players?"
-    num_players = gets.strip.to_i
-    if num_players == 0
-      play_1 = Players::Computer.new("X")
-      play_2 = Players::Computer.new("O")
-      self.new(play_1, play_2)
-    end
-
-
-
-  end
-
   attr_accessor :board, :player_1, :player_2
 
   def initialize(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"), board = Board.new)
     @board = board
     @player_1 = player_1
     @player_2 = player_2
+
+    play
   end
 
   def current_player
